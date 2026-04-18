@@ -84,7 +84,7 @@
       padding: 100px 8%;
     }
 
-    /* ── HERO ── */
+   
     .hero {
       min-height: 100vh;
       display: flex;
@@ -100,7 +100,7 @@
       flex: 1;
     }
 
-    /* Profile photo */
+   
     .profile-photo-wrap {
       flex-shrink: 0;
     }
@@ -122,7 +122,7 @@
       overflow: hidden;
     }
 
-    /* Placeholder avatar when no real image */
+
     .profile-photo-placeholder {
       width: 320px;
       height: 320px;
@@ -369,9 +369,9 @@
   </nav>
 
   <section class="hero">
-    <!-- Left: photo + text -->
+   
     <div class="hero-left">
-      <!-- Profile photo: replace the src with your actual photo path/URL -->
+      
       <div class="profile-photo-wrap">
         <img
           id="profileImg"
@@ -380,7 +380,7 @@
           class="profile-photo"
           onerror="this.style.display='none'; document.getElementById('profileFallback').style.display='flex';"
         />
-        <!-- Fallback avatar shown when no image file is found -->
+        
         <div id="profileFallback" class="profile-photo-placeholder" style="display:none;">
           <i class="fas fa-user"></i>
         </div>
@@ -398,7 +398,7 @@
       </div>
     </div>
 
-    <!-- Right: quick info card -->
+    
     <div class="hero-card">
       <h3>Quick Info</h3>
       <p><strong>Email:</strong> maheshpatgar2004@gmail.com</p>
@@ -481,7 +481,7 @@
     </div>
   </section>
 
-  <!-- ── CONTACT SECTION (fixed) ── -->
+  
   <section id="contact">
     <h2 class="section-title">Let's <span>Connect</span></h2>
     <div class="grid">
@@ -498,14 +498,14 @@
 
       <div class="contact-card">
         <h3><i class="fab fa-linkedin"></i> LinkedIn</h3>
-        <!-- Replace the href with your actual LinkedIn URL -->
+        
         <a href="https://linkedin.com/in/maheshpatagar2004" target="_blank">linkedin.com/in/maheshpatagar</a>
         <p style="font-size:0.8rem;color:#64748b;">(update with your actual URL)</p>
       </div>
 
       <div class="contact-card">
         <h3><i class="fab fa-github"></i> GitHub</h3>
-        <!-- Replace the href with your actual GitHub URL -->
+       
         <a href="https://github.com/maheshpatgar" target="_blank">github.com/maheshpatgar</a>
         <p style="font-size:0.8rem;color:#64748b;">(update with your actual URL)</p>
       </div>
@@ -520,7 +520,7 @@
   <script>
     const sections = document.querySelectorAll('section');
 
-    // Use IntersectionObserver instead of scroll offset — works reliably for all sections including bottom ones
+   
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -528,8 +528,7 @@
           entry.target.style.transform = 'translateY(0px)';
         }
       });
-    }, { threshold: 0.05 }); // trigger as soon as 5% of section is visible
-
+    }, { threshold: 0.05 });
     sections.forEach(section => {
       section.style.opacity = '0';
       section.style.transform = 'translateY(50px)';
@@ -537,7 +536,7 @@
       observer.observe(section);
     });
 
-    // Show profile fallback on load if image fails immediately
+   
     window.addEventListener('load', () => {
       const img = document.getElementById('profileImg');
       if (!img.complete || img.naturalWidth === 0) {
